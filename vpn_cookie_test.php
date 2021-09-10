@@ -37,23 +37,21 @@ class CookieTest {
         $this->logCookieValue("First visit", $this->new_val);
     }
     private function logCookieValue($type, $value){
-        if ($this->log === true){
-            $entry = "Visitor IP: " . $_SERVER["REMOTE_ADDR"] . "\n" .
-                     "Visit type: " . $type . "\n" .
-                     "Cookie value: " . $value . "\n" . 
-                     "IP info: " . "http://www.scamalytics.com/ip/" . 
-                                        $_SERVER["REMOTE_ADDR"] . "\n" .
-                     "Time: " . $this->getTimestamp() . "\n\n";
-            $log_file = "log.txt";
-            if (!file_exists($log_file)){
-                file_put_contents("log.txt", $entry);
-            } elseif (file_exists($log_file)){
-                $existing = file_get_contents($log_file);
-                file_put_contents($log_file, $entry);
-                $file = fopen("log.txt", "a+");
-                fwrite($file, $existing);
-                fclose($file);
-            }
+        $entry = "Visitor IP: " . $_SERVER["REMOTE_ADDR"] . "\n" .
+                    "Visit type: " . $type . "\n" .
+                    "Cookie value: " . $value . "\n" . 
+                    "IP info: " . "http://www.scamalytics.com/ip/" . 
+                                    $_SERVER["REMOTE_ADDR"] . "\n" .
+                    "Time: " . $this->getTimestamp() . "\n\n";
+        $log_file = "log.txt";
+        if (!file_exists($log_file)){
+            file_put_contents("log.txt", $entry);
+        } elseif (file_exists($log_file)){
+            $existing = file_get_contents($log_file);
+            file_put_contents($log_file, $entry);
+            $file = fopen("log.txt", "a+");
+            fwrite($file, $existing);
+            fclose($file);
         }
     }
     private function getTimestamp(){
