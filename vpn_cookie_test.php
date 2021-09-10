@@ -15,12 +15,10 @@ class CookieTest {
     public function checkCookie(){
         $found = false;
         foreach ($this->cookie_names as $current_name){
-            if ($found === false){
-                if (isset($_COOKIE[$current_name])){
-                    $this->logCookieValue("Returning", 
-                        $_COOKIE[$current_name]);  
-                        $found = true; //Terminate loop if existing cookie found
-                }
+            if (isset($_COOKIE[$current_name])){
+                $this->logCookieValue("Returning", 
+                    $_COOKIE[$current_name]);  
+                    break; //Terminate loop if existing cookie found
             }
         }
         if ($found === false){ //If not found after loop completion
