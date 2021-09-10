@@ -5,4 +5,4 @@ The script works like this. First, it will set a cookie on a user's computer, co
 
 The cookies the script sets are disguised as normal cookies, making references to Google, shopping carts, and GDPR. This means that, if a visitor is analyzing the cookies your website is setting, they will be unlikely to determine the cookies' true purpose.
 
-The script also provides a handy link to find out more information about an IP address from Scamalytics, which can reveal more things about an IP address, such as its likelihood of being a VPN or proxy connection. The script will also log the exact time and date of the visit (don't forget to change the time zone in the getTimestamp() method to be local to your time or it won't work properly.
+The script also provides a handy link to find out more information about an IP address from Scamalytics, which can reveal more things about an IP address, such as its likelihood of being a VPN or proxy connection. The script will also log the exact time and date of the visit (don't forget to change the time zone in the getTimestamp() method to be local to your time or it won't work properly).
