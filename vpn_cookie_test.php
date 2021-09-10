@@ -18,6 +18,7 @@ class CookieTest {
             if (isset($_COOKIE[$current_name])){
                 $this->logCookieValue("Returning", 
                     $_COOKIE[$current_name]);  
+                    $found = true;
                     break; //Terminate loop if existing cookie found
             }
         }
