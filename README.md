@@ -1,5 +1,5 @@
 # VPN-Cookie-Test
-This PHP script can be installed on a web page to determine if multiple IP addresses are all coming from the same device.
+This PHP script can be installed on a web page to determine if multiple IP addresses are all coming from the same device – even if the visitor is using a VPN.
 
 The script works like this. First, it will set a cookie on a user's computer, containing a unique sequence of letters and numbers. It will then write this value into a log.txt file, along with the IP address of the visitor. If the script can find a cookie on the user's device from a prior visit, however, it will simply log the existing value. This means that, even if the visitor is using multiple IP addresses, the cookie value will still be the same. You can use this cookie value to determine if multiple IP addresses visiting your web pages are in fact one person/computer. This is assuming the person has not cleared cookies after each visit – if this is the case, their visits will report as first-time visits each time.
 
