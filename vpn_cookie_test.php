@@ -6,6 +6,7 @@ class CookieTest {
             "ae427921_google9531127aRtF",
             "resid_login_token_id-886z454321atBrEqWE9", 
             "languageSettings8r5299166127",
+            "gdpr_consent_spec32ARikJhfz",
             "shopping_cart_local331rFdSwccVbzs","userTheme88743251zcvFGhrdzaswrtf",
             "settingsStorage881734FvczsDF883"];
         $this->new_val = null;
